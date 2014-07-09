@@ -1,0 +1,40 @@
+{% extends "base.html"%}
+{% block contenido %}
+	<div class="container">
+            <div class="formulario">
+                <h1>
+                    Registro de Docente
+                </h1>
+	<form action="#" method="POST" id="formulario">
+		{% csrf_token %}
+		<ul>
+            <li>
+            	{{form.nombre.errors}}
+				<label>Nombre:</label>
+				{{form.nombre}}
+				
+			</li>
+			<li>
+				{{form.apellido.errors}}
+				<label>Apellido:</label>
+				{{form.apellido}}
+			</li>
+			<li>
+				{{form.ci.errors}}
+				<LABEL>CI:</LABEL>
+				{{form.ci}}		
+			</li>
+			<li>
+				{{form.email.errors}}
+				<label>Email:</label>
+				{{form.email}}
+				
+			</li>
+			<button class="btn btn-primary" type="submit">Registrar</a>
+		
+		</ul>
+	</form>
+	</div>
+        </div>
+{% endblock %}
+
